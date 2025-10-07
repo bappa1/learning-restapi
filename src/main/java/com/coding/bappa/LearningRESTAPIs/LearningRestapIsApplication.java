@@ -9,6 +9,7 @@ public class LearningRestapIsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(LearningRestapIsApplication.class, args);
 		System.out.println("This is The main method::::");
+		System.out.println("Store this code in Git");
 	}
 
 }
