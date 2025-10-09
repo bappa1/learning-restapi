@@ -2,6 +2,7 @@ package com.coding.bappa.LearningRESTAPIs.controller;
 
 import com.coding.bappa.LearningRESTAPIs.dto.StudentDto;
 import com.coding.bappa.LearningRESTAPIs.service.StudentService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class StudentController {
 
     // CREATE (POST)
     @PostMapping
-    public ResponseEntity<StudentDto> createStudent(@RequestBody StudentDto studentDto) {
+    public ResponseEntity<StudentDto> createStudent(@RequestBody @Valid StudentDto studentDto) {
         StudentDto createdStudent = studentService.createStudent(studentDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdStudent);
     }
