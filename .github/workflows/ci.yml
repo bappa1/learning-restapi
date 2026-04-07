@@ -17,5 +17,5 @@ jobs:
         with:
           java-version: '17'
 
-      - name: Build with Maven
-        run: mvn clean install
+      - name: Build with Maven Wrapper
+        run: ./mvnw clean install -DskipTests
